@@ -1,0 +1,27 @@
+apiVersion: servicemanager.servicemanager.io/v1
+kind: ServiceManager
+metadata:
+  name: servicemanager-sample
+spec:
+  # Add fields here
+  category: Deployment
+  #selector:
+    #app: servicemanager-sample
+  replicas: 2
+  port: 30027 #nodeport 和 serviceport
+  targetport: 80 #container port
+  template:
+    metadata:
+      name: servicemanager-sample
+    spec:
+      containers:
+        - image: nginx
+          imagePullPolicy: IfNotPresent
+          name: servicemanager-sample
+          resources:
+            limits:
+              cpu: 110m
+              memory: 256Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi

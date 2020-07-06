@@ -1,0 +1,7 @@
+domain: servicemanager.io
+repo: servicemanager
+resources:
+- group: servicemanager
+  kind: ServiceManager
+  version: v1
+version: "2"
