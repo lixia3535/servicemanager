@@ -1,0 +1,2 @@
+# servicemanager
+这个自定义资源主要实现的功能通过nodeip+port实现服务的访问
